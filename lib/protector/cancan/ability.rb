@@ -51,7 +51,8 @@ module Protector
             can_without_protector? action, entity_set, *extra_args
           end
 
-          alias_method_chain :can?, :protector
+          alias_method :can_without_protector?, :can?
+          alias_method :can?, :can_with_protector?
         end
       end
     end
