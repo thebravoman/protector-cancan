@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "protector", ">= 0.5.3"
-  spec.add_dependency "cancan"
+  spec.add_dependency "cancancan", ">= 2.0.0" # because we depend on cancan-inherited_resources
+  spec.add_dependency "cancan-inherited_resources"
   spec.add_dependency "activesupport"
 end
